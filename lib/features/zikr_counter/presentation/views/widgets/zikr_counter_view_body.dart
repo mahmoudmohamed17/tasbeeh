@@ -37,18 +37,19 @@ class ZikrCounterViewBody extends StatelessWidget {
               ],
             ),
             const SizedBox(
-              height: 55,
+              height: 10,
             ),
             //
             GestureDetector(
               onTap: () {
-                BlocProvider.of<CounterCubit>(context).incremenet(count: zikrModel.count, zikrModel: zikrModel);
+                BlocProvider.of<CounterCubit>(context)
+                    .incremenet(count: zikrModel.count, zikrModel: zikrModel);
               },
               child: Container(
                 margin: const EdgeInsets.all(25),
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: kPrimaryColor,
-                  borderRadius: BorderRadius.circular(175),
+                  shape: BoxShape.circle,
                 ),
                 alignment: Alignment.center,
                 height: MediaQuery.of(context).size.height * 0.41,
@@ -59,7 +60,7 @@ class ZikrCounterViewBody extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
